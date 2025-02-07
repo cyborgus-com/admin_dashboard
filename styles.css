@@ -15,7 +15,7 @@ html, body {
     display: grid;
     overflow: auto;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
     height: 100%;
 }
 
@@ -31,7 +31,7 @@ html, body {
     display: grid;
     overflow: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 72px repeat(11, 48px);
+    grid-template-rows: 72px 36px repeat(10, 48px);
     color: white;
 }
 
@@ -46,6 +46,7 @@ html, body {
 .side img {
     height: 55%;
     align-items: center;
+    filter: invert(100%); 
 }
 
 .side p {
@@ -59,10 +60,6 @@ html, body {
     font-size: 2rem;
 }
 
-.logo img {
-    height: 55%;
-}
-
 /* ************************ */
 /* HEADER */
 /* ************************ */
@@ -71,6 +68,69 @@ html, body {
     background-color: white;
     grid-column: 2/3;
     grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.header img {
+    height: 1.5rem;
+}
+
+.header-search-info .usrimg {
+    height: 5rem;
+}
+
+.header-welcome img {
+    height: 7rem;
+}
+
+.header-search-bar {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+}
+
+.header-search-info {
+    grid-column: 5/7;
+    grid-row: 1/2;
+    display:flex;
+    align-items: center;
+}
+
+.header-welcome {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display:flex;
+    align-items: center;
+}
+
+
+/* stack .welcome-greeting and .welcome-username on top of each other */
+.header-welcome-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-buttons {
+    grid-column: 4/7;
+    grid-row: 2/3;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-search-username {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.welcome-username {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* ************************ */
