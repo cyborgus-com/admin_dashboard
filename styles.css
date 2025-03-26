@@ -148,11 +148,20 @@ html, body {
     grid-template-rows: 1fr;
 }
 
+/* LEFT */
+
 .main-left {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 72px 1fr 1fr 1fr;
 }
+
+.main-left .main-header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+/* RIGHT */
 
 .main-right {
     display: grid;
@@ -173,7 +182,8 @@ html, body {
     grid-template-rows: 72px 1fr;
 }
 
-.main-left .main-header {
-    grid-column: 1/3;
-    grid-row: 1/2;
+.right-upper .announcements {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
 }
